@@ -44,6 +44,9 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="170" minValue="30" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="j2r-5N-94W">
                                                 <rect key="frame" x="-2" y="29" width="394" height="31"/>
+                                                <connections>
+                                                    <action selector="hightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="JR2-dm-rFN"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRC-AD-geP">
                                                 <rect key="frame" x="0.0" y="0.0" width="50.666666666666664" height="25"/>
@@ -84,6 +87,9 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="5" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="pOH-oV-2VH">
                                                 <rect key="frame" x="-2" y="29" width="394" height="31"/>
+                                                <connections>
+                                                    <action selector="weightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3ax-cF-xwu"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwI-dM-TTE">
                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="25"/>
@@ -95,8 +101,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh7-jE-egx">
-                                                <rect key="frame" x="328" y="0.0" width="62" height="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh7-jE-egx">
+                                                <rect key="frame" x="337.66666666666669" y="0.0" width="52.333333333333314" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="2ec-oX-YSz"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="GCG-Lq-4Pi"/>
@@ -127,6 +133,9 @@
                                         <state key="normal" title="Calculate">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Owg-oY-6Ug"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -159,6 +168,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="p55-gz-IUG" secondAttribute="trailing" id="vre-zl-FFh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hightSlider" destination="j2r-5N-94W" id="Yeg-Pj-unU"/>
+                        <outlet property="hightValueLabel" destination="bgp-Qx-HDJ" id="UR8-ZO-o4D"/>
+                        <outlet property="weightSlider" destination="pOH-oV-2VH" id="ip8-Bf-ROn"/>
+                        <outlet property="weightValueLabel" destination="Zh7-jE-egx" id="8Lg-HM-rzp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
