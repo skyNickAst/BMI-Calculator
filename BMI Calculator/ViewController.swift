@@ -29,16 +29,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
-        let a = calculateBMI()
-        print(a)
-        
+        performSegue(withIdentifier: "toResult", sender: self)
     }
     
-    func calculateBMI() -> String {
+    func calculateBMI() -> Float {
         let hightDevided = Float(hightValue) / 100
         let result = Float(weightValue) / (hightDevided * hightDevided)
-        let bmi = String(format: "%.1f", result)
-        return bmi
+        return result
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "toResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.result = calculateBMI()
+        }
     }
 }
 
